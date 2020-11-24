@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<layout title="ComKataAnhson1View" option="ComKataAnhsonViewOption">
+		<help
+			key="JHELP_MENUS_MENU_ITEM_MYWALKS"
+		/>
+		<message>
+			<![CDATA[ComKataAnhsonViewDesc]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the parameters object for the layout. -->
+		<fields name="params">
+		<fieldset name="request" label="COM_MENUS_BASIC_FIELDSET_LABEL">
+			
+		</fieldset>
+		<fieldset name="basic">			
+			<field name="database" type="text" label="Cơ Sở Dữ Liệu" description="" size="10" />
+			<field name="field1" type="text" default="Nhãn Số 1" label="Nhãn Số 1" description="" size="10" />
+			<field name="field2" type="text" default="Nhãn Số 2" label="Nhãn Số 2" description="" size="10" />
+			<field name="field3" type="text" default="Nhãn Số 3" label="Nhãn Số 3" description="" size="10" />
+			<field name="field4" type="text" default="Nhãn Số 4" label="Nhãn Số 4" description="" size="10" />
+			<field name="field5" type="text" default="Nhãn Số 5" label="Nhãn Số 5" description="" size="10" />	
+			<field name="field6" type="text" default="Nhãn Số 6" label="Nhãn Số 6" description="" size="10" />
+			<field name="field7" type="text" default="Nhãn Số 7" label="Nhãn Số 7" description="" size="10" />
+			<field name="field8" type="text" default="Nhãn Số 8" label="Nhãn Số 8" description="" size="10" />
+			<field name="field9" type="text" default="Nhãn Số 9" label="Nhãn Số 9" description="" size="10" />	
+<field name="anhien1" type="radio" default="1" label="Ẩn Hiện 1" description="" class="btn-group btn-group-yesno">
+  <option value="1">JYES</option>
+</field>		
+<field name="anhien2" type="radio" default="1" label="Ẩn Hiện 2" description="" class="btn-group btn-group-yesno">
+  <option value="1">JYES</option>
+  <option value="0">JNO</option>
+</field>	
+<field name="anhien3" type="radio" default="1" label="Ẩn Hiện 3" description="" class="btn-group btn-group-yesno">
+  <option value="1">JYES</option>
+  <option value="0">JNO</option>
+</field>		
+<field name="anhien4" type="radio" default="1" label="Ẩn Hiện 4" description="" class="btn-group btn-group-yesno">
+  <option value="1">JYES</option>
+  <option value="0">JNO</option>
+</field>	
+<field name="anhien5" type="radio" default="1" label="Ẩn Hiện 5" description="" class="btn-group btn-group-yesno">
+  <option value="1">JYES</option>
+  <option value="0">JNO</option>
+</field>		
+<field name="anhien6" type="radio" default="1" label="Ẩn Hiện 6" description="" class="btn-group btn-group-yesno">
+  <option value="1">JYES</option>
+  <option value="0">JNO</option>
+</field>	
+<field name="anhien7" type="radio" default="1" label="Ẩn Hiện 7" description="" class="btn-group btn-group-yesno">
+  <option value="1">JYES</option>
+  <option value="0">JNO</option>
+</field>		
+<field name="anhien8" type="radio" default="1" label="Ẩn Hiện 8" description="" class="btn-group btn-group-yesno">
+  <option value="1">JYES</option>
+  <option value="0">JNO</option>
+</field>				
+<field name="anhien9" type="radio" default="1" label="Ẩn Hiện 9" description="" class="btn-group btn-group-yesno">
+  <option value="1">JYES</option>
+  <option value="0">JNO</option>
+</field>				
+			
+		</fieldset>
+	</fields>
+</metadata>
