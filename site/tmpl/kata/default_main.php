@@ -1,12 +1,4 @@
 <?php
-/**
- * @package     Mywalks.Site
- * @subpackage  com_mywalks
- *
- * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
-
 defined('_JEXEC') or die;
 
 use Joomla\CMS\HTML\HTMLHelper;
@@ -25,10 +17,8 @@ HTMLHelper::_('behavior.core');
 
 HTMLHelper::_('script','https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js', array('version' =>'auto'),array('defer' => 'true'));
 HTMLHelper::_('script','https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.0/angular-sanitize.min.js', array('version' =>'auto'),array('defer' => 'true'));
-
-HTMLHelper::_('script','components/com_katas/js/anhson.js', array('version' =>'auto'),array('defer' => 'true'));
-HTMLHelper::_('stylesheet','components/com_katas/css/edit.css', array('version' =>'auto'),array('defer' => 'true'));
-HTMLHelper::_('stylesheet','components/com_katas/css/anhson.css', array('version' =>'auto'),array('defer' => 'true'));
+HTMLHelper::_('script','components/com_kata/js/kata.js', array('version' =>'auto'),array('defer' => 'true'));
+HTMLHelper::_('stylesheet','components/com_kata/css/kata.css', array('version' =>'auto'),array('defer' => 'true'));
 ?>
 <div ng-app="AnhSon" ng-controller="AnhSon" class="container-fluid">
 	<button class="btn btn-primary {{AnHienTaoMoi}}" ng-click="AnTaoMoi()">Ẩn</button>

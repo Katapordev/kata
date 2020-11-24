@@ -1,28 +1,6 @@
 <?php
-
-/**
-
- * @package     Mywalks.Site
-
- * @subpackage  com_mywalks
-
- *
-
- * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
-
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
-
- */
-
-
-
-namespace Kata\Component\Katas\Site\Service;
-
-
-
+namespace Kata\Component\Kata\Site\Service;
 defined('_JEXEC') or die;
-
-
 
 use Joomla\CMS\Application\SiteApplication;
 
@@ -46,128 +24,28 @@ use Joomla\CMS\Menu\AbstractMenu;
 
 use Joomla\Database\DatabaseInterface;
 
-
-
-/**
-
- * Routing class of com_mywalks
-
- *
-
- * @since  3.3
-
- */
-
 class Router extends RouterView
 
 {
 
 	protected $noIDs = false;
 
-
-
-	/**
-
-	 * The category factory
-
-	 *
-
-	 * @var CategoryFactoryInterface
-
-	 *
-
-	 * @since  4.0.0
-
-	 */
-
 	private $categoryFactory;
 
-
-
-	/**
-
-	 * The db
-
-	 *
-
-	 * @var DatabaseInterface
-
-	 *
-
-	 * @since  4.0.0
-
-	 */
-
 	private $db;
-
-
-
-	/**
-
-	 * Mywalks Component router constructor
-
-	 *
-
-	 * @param   SiteApplication           $app              The application object
-
-	 * @param   AbstractMenu              $menu             The menu object to work with
-
-	 * @param   CategoryFactoryInterface  $categoryFactory  The category object
-
-	 * @param   DatabaseInterface         $db               The database object
-
-	 */
-
 	public function __construct(SiteApplication $app, AbstractMenu $menu,
 
 			CategoryFactoryInterface $categoryFactory, DatabaseInterface $db)
 
 	{
-
 		$this->categoryFactory = $categoryFactory;
-
 		$this->db              = $db;
-
-
-
-		$params = ComponentHelper::getParams('com_katas');
-
+		$params = ComponentHelper::getParams('com_kata');
 		$this->noIDs = (bool) $params->get('sef_ids');
-
-
-
-		$katas = new RouterViewConfiguration('katas');
-
-		$katas->setKey('id');
-
-		$this->registerView($katas);
-
-
-
-		$nhanghi = new RouterViewConfiguration('nhanghi');
-
-		$nhanghi->setKey('id');
-
-		$this->registerView($nhanghi);
-		
-		$taza = new RouterViewConfiguration('taza');
-
-		$taza->setKey('id');
-
-		$this->registerView($taza);
-
-		$this->registerView(new RouterViewConfiguration('anhson'));
-		$this->registerView(new RouterViewConfiguration('anhson1'));
-		$this->registerView(new RouterViewConfiguration('chusau'));
 		$this->registerView(new RouterViewConfiguration('kata'));		
 		parent::__construct($app, $menu);
-
-
-
 		$this->attachRule(new MenuRules($this));
-
 		$this->attachRule(new StandardRules($this));
-
 		//$this->attachRule(new NomenuRules($this));
 
 	}

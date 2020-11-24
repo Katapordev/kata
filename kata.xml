@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension type="component" version="4.0" method="upgrade" client="site">
-	<name>Katas</name>
+	<name>Kata</name>
 	<!-- The following elements are optional and free of formatting conttraints -->
 	<creationDate>09/2020</creationDate>
 	<author>Kataprodev</author>
@@ -9,10 +9,10 @@
 	<copyright>Copyright (C) 2019 Kataprodev, All rights reserved.</copyright>
 	<license>GNU/GPL Version 2 or later - http://www.gnu.org/licenses/gpl-2.0.html</license>
 	<!--  The version string is recorded in the components table -->
-	<version>4.0.5</version>
+	<version>4.0.0</version>
 	<!-- The description is optional and defaults to the name -->
 	<description>Kata Component</description>
-	<namespace>Kata\Component\Katas</namespace>
+	<namespace>Kata\Component\Kata</namespace>
 
 	<install> <!-- Runs on install -->
 		<sql>
@@ -42,7 +42,7 @@
 	</files>
 	
 	<languages folder="site">
-		<language tag="en-GB">language/en-GB/en-GB.com_katas.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.com_Kata.ini</language>
 	</languages>
 	
 	<administration>
@@ -62,24 +62,24 @@
 			<folder>View</folder>
 		</files>
 		<languages folder="admin">
-			<language tag="en-GB">language/en-GB/en-GB.com_katas.ini</language>
-			<language tag="en-GB">language/en-GB/en-GB.com_katas.sys.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_Kata.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_Kata.sys.ini</language>
 		</languages>
-		<menu img="class:default" link="option=com_katas">Kata Component</menu>
+		<menu img="class:default" link="option=com_Kata">Kata Component</menu>
 		<submenu>
 			<!--
 				Note that all & must be escaped to &amp; for the file to be valid
 				XML and be parsed by the installer
 			-->
 			<menu
-				link="option=com_katas"
+				link="option=com_Kata"
 				view="kata"
 				img="class:kata"
 				>
 				Kata
 			</menu>
 			<menu
-				link="option=com_katas"
+				link="option=com_Kata"
 				view="kata_date"
 				>
 			Kata Date
@@ -87,7 +87,7 @@
 		</submenu>
 	</administration>
 		<updateservers>
-	<server type="extension" name="Katas Updates">https://github.com/Katapordev/com_katas/raw/master/katasupdate.xml</server>
+	<server type="extension" name="Kata Updates">https://github.com/Katapordev/com_Kata/raw/master/Kataupdate.xml</server>
 	</updateservers>	
 	
 	

@@ -1,48 +1,13 @@
 <?php
-
-/**
-
- * @package     Mywalks.Site
-
- * @subpackage  com_mywalks
-
- *
-
- * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
-
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
-
- */
-
-
-
-namespace Kata\Component\Katas\Site\Controller;
-
-
-
+namespace Kata\Component\Kata\Site\Controller;
 defined('_JEXEC') or die;
-
-
-
 use Joomla\CMS\MVC\Controller\BaseController;
 use Joomla\CMS\Factory;
-
-
-/**
-
- * Mywalks Component Controller
-
- *
-
- * @since  1.5
-
- */
-
 class KataController extends BaseController
 
 {
-	
-		public function CSDLCreate()
+
+	public function CSDLCreate()
 			{
 			$db = Factory::getDbo();
 			$query = $db->getQuery(true);
@@ -79,20 +44,19 @@ class KataController extends BaseController
 			$profile->Noidung = $dulieu->Noidung;
 			$result = $db->insertObject('#__kata', $profile);		
 			}
-	
-	public function EditorRead()
-	{
-		$db = Factory::getDbo();		
-		$query = $db->getQuery(true)
-		->select($db->quoteName(array('id','Ten','Noidung','Ngaytao')))
-		->from($db->quoteName('#__kata'))
-		->order('id DESC');
-		$db->setQuery($query);
-		$row = $db->loadObjectList();
-		$row = json_encode((array) $row);
-		print_r($row);
+		public function EditorRead()
+		{
+			$db = Factory::getDbo();		
+			$query = $db->getQuery(true)
+			->select($db->quoteName(array('id','Ten','Noidung','Ngaytao')))
+			->from($db->quoteName('#__kata'))
+			->order('id DESC');
+			$db->setQuery($query);
+			$row = $db->loadObjectList();
+			$row = json_encode((array) $row);
+			print_r($row);
 		}	
-	public function EditorUpdate()
+		public function EditorUpdate()
 		{
         $data = json_decode(file_get_contents("php://input"));
 		$dulieu = $data->dulieu;
@@ -105,8 +69,6 @@ class KataController extends BaseController
 		$result = $db->updateObject('#__kata', $profile, 'id');
 		echo '{"loai":"info","noidung":"Đã Cập Nhật Dữ Liệu"}';
 		}
-	
-	
 		public function EditorDelete()
 
 			{
@@ -121,7 +83,6 @@ class KataController extends BaseController
 				$db->setQuery($query);
 				$result = $db->execute();
 			}	
-	
 
 }
 
