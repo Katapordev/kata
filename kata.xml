@@ -47,43 +47,30 @@
 	
 	<administration>
 		<files folder="admin">
-			<file>access.xml</file>
-			<file>config.xml</file>
-			<folder>Controller</folder>
-			<folder>Extension</folder>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
 			<folder>forms</folder>
-			<folder>Helper</folder>
-			<folder>Model</folder>
-			<folder>Service</folder>
 			<folder>services</folder>
-			<folder>sql</folder>
-			<folder>Table</folder>
+			<folder>src</folder>
 			<folder>tmpl</folder>
-			<folder>View</folder>
 		</files>
 		<languages folder="admin">
-			<language tag="en-GB">language/en-GB/en-GB.com_Kata.ini</language>
-			<language tag="en-GB">language/en-GB/en-GB.com_Kata.sys.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_kata.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_kata.sys.ini</language>
 		</languages>
-		<menu img="class:default" link="option=com_Kata">Kata Component</menu>
+		<menu img="class:default" link="option=com_kata">Kata Component</menu>
 		<submenu>
 			<!--
 				Note that all & must be escaped to &amp; for the file to be valid
 				XML and be parsed by the installer
 			-->
 			<menu
-				link="option=com_Kata"
+				link="option=com_kata"
 				view="kata"
 				img="class:kata"
 				>
 				Kata
-			</menu>
-			<menu
-				link="option=com_Kata"
-				view="kata_date"
-				>
-			Kata Date
-			</menu>			
+			</menu>		
 		</submenu>
 	</administration>
 		<updateservers>

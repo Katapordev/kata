@@ -46,6 +46,7 @@ class Router extends RouterView
 		parent::__construct($app, $menu);
 		$this->attachRule(new MenuRules($this));
 		$this->attachRule(new StandardRules($this));
+
 		//$this->attachRule(new NomenuRules($this));
 
 	}
