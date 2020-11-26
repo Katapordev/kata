@@ -67,7 +67,7 @@
 				>
 				Kata
 			</menu>	
-		<menu link="option=com_kata&view=sharynslide" view="sharynslide">
+		<menu link="option=com_kata&amp;view=sharynslide" view="sharynslide">
 				Sharyn Slide
 			</menu>	
 		</submenu>
