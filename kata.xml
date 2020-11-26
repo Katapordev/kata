@@ -12,8 +12,7 @@
 	<version>4.0.0</version>
 	<!-- The description is optional and defaults to the name -->
 	<description>Kata Component</description>
-	<namespace>Kata\Component\Kata</namespace>
-
+	<namespace path="src">Joomla\Component\Kata</namespace>
 	<install> <!-- Runs on install -->
 		<sql>
 			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
@@ -24,12 +23,6 @@
 			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
 		</sql>
 	</uninstall>
-
-	<!-- Site Main File Copy Section -->
-	<!-- Note the folder attribute: This attribute describes the folder
-		to copy FROM in the package to install therefore files copied
-		in this section are copied from /site/ in the package -->
-
 	<files folder="site">
 		<folder>Controller</folder>
 		<folder>Helper</folder>
@@ -53,6 +46,7 @@
 			<folder>services</folder>
 			<folder>src</folder>
 			<folder>tmpl</folder>
+			<folder>sql</folder>
 		</files>
 		<languages folder="admin">
 			<language tag="en-GB">language/en-GB/en-GB.com_kata.ini</language>
@@ -70,11 +64,14 @@
 				img="class:kata"
 				>
 				Kata
-			</menu>		
+			</menu>	
+		<menu link="option=com_kata" view="sharynslide">
+				Sharyn Slide
+			</menu>	
 		</submenu>
 	</administration>
 		<updateservers>
-	<server type="extension" name="Kata Updates">https://github.com/Katapordev/com_Kata/raw/master/Kataupdate.xml</server>
+	<server type="extension" name="Kata Updates">https://raw.githubusercontent.com/Katapordev/kata/main/kataupdate.xml</server>
 	</updateservers>	
 	
 	

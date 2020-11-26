@@ -5,10 +5,10 @@
 <element>com_kata</element>
 <type>component</type>
 <client>administrator</client>
-<version>4.0.1</version>
-<infourl title="Joomla!">https://github.com/Katapordev/com_kata/raw/master/katainfo.html</infourl>
+<version>4.0.2</version>
+<infourl title="Joomla!">https://raw.githubusercontent.com/Katapordev/kata/main/katainfo.html</infourl>
 <downloads>
-<downloadurl type="full" format="zip">https://github.com/Katapordev/com_kata/raw/master/com_kata.zip</downloadurl>
+<downloadurl type="full" format="zip">https://github.com/Katapordev/kata/raw/main/kata.zip</downloadurl>
 </downloads>
 <tags>
 <tag>stable</tag>

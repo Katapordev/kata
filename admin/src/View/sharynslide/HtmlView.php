@@ -1,5 +1,5 @@
 <?php
-namespace Joomla\Component\Kata\Administrator\View\Kata;
+namespace Joomla\Component\Kata\Administrator\View\Sharynslide;
 \defined('_JEXEC') or die;
 use Joomla\CMS\Factory;
 use Joomla\CMS\Helper\ContentHelper;
